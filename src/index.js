@@ -14,6 +14,8 @@ import App from './App';
   )
 */
 
+//due to <React.StrictMode></React.StrictMode> output will be printed twice in console
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
