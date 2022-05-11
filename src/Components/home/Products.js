@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function UsingAxios() {
+export default function Products() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ export default function UsingAxios() {
       .then((response) => {
         const data = response.data;
         const prods = data.map((d) => {
-          return { key: d.id, info: d.name + " " + d.price };
+          return { key: d.id, info: d.name + " " + d.dateManufactured };
         });
         setProducts(prods);
       })

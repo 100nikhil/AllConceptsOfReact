@@ -1,23 +1,29 @@
-import { Fragment } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Another from "./Components/Another";
-import FirstClass from "./Components/FirstClass";
-import UsingAxios from "./Components/UsingAxios";
+import Home from "./Components/home/Home";
+import Layout from "./Header/Layout";
+import Products from "./Components/home/Products";
+import ClassCompos from "./Components/class-components/ClassCompos";
+import { useSelector } from "react-redux";
 
 function App() {
 
-  const something = "This is the passed prop!";
+  const loggedIn = useSelector(state => state.isLoggedIn);
 
-  return (
-    <Fragment>
-      <div className="container">
-        <h1>Welcome to react version 18+ </h1>
-        <Another myprop={"PROPPAAAA!"}/>
-        <FirstClass prop1={something}/>
-        <UsingAxios />
-      </div>
-    </Fragment>
-  );
+  return(
+    <Layout>
+      <Routes>
+        {/* All path match excatly by default, Hence 'exact' is not supported and 
+            NOT NEEDED in react router version 6+ for path="/" 
+        */}
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={loggedIn ? <Products /> : <Navigate to={"/"} />} />
+        {/* /classComonents/* here * means ClassCompos have child routes defined in it  */}
+        <Route path="/classComponents/*" element={loggedIn?<ClassCompos />:<Navigate to={"/"} />} />
+        <Route path="*" element={<Navigate to={"/"} />} />
+      </Routes>
+    </Layout>
+  )
 }
 
 export default App;
