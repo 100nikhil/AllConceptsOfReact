@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import Another from "./Another";
 import CreateElementUsecase from "./CreateElementUsecase";
 import FirstClass from "./FirstClass";
+import GitRepos from "./GitRepos";
 
 function Home() {
 
@@ -14,6 +15,8 @@ function Home() {
         <Another myprop={"PROPPAAAA!"}/>
         <FirstClass prop1={something}/>
         <CreateElementUsecase />
+        <hr/>
+        <GitRepos />
       </div>
     </Fragment>
   );

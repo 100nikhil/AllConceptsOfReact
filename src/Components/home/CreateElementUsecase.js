@@ -1,7 +1,11 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 
 const CreateElementUsecase = () => {
-  const title = "Office Space";
+  const title = React.createElement(
+    'h1',
+    {className:'bg-warning text-center mt-3', },
+    'Office Space, at affordable range.' 
+    );  //created element
   const officeImage = (
     <img
       src="https://t4.ftcdn.net/jpg/03/84/55/29/360_F_384552930_zPoe9zgmCF7qgt8fqSedcyJ6C6Ye3dFs.jpg"
@@ -18,10 +22,10 @@ const CreateElementUsecase = () => {
 
   return (
     <Fragment>
-      <h1>{title}, at Affordable Range</h1>
+      {title}
       {items.map(item => {
         return (
-          <Fragment>
+          <Fragment key={item.name}>
           <hr /> 
           {officeImage}
           <h1>Name: {item.name}</h1>

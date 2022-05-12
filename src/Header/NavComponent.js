@@ -34,6 +34,11 @@ const NavComponent = () => {
               ClassCompos
             </Link>
             }
+            {
+              loggedIn && <Link to="/contextApi" className="nav-link" style={{color:"white"}}>
+              Context
+            </Link>
+            }
 
           </div>
           {
