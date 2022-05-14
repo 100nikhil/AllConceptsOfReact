@@ -39,6 +39,11 @@ const NavComponent = () => {
               Context
             </Link>
             }
+            {
+              loggedIn && <Link to="/hooks" className="nav-link" style={{color:"white"}}>
+              Hooks
+            </Link>
+            }
 
           </div>
           {

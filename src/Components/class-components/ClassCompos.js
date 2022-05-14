@@ -7,6 +7,7 @@ import Homie from "./Homie";
 import CountPeople from "./CountPeople";
 import PlayersHome from "./players/PlayersHome";
 import CurrencyConverter from "./events-example/CurrencyConverter";
+import LifecycleApp from "./lifecycleMethods/LifecycleApp";
 
 class ClassCompos extends Component {
   render() {
@@ -19,6 +20,7 @@ class ClassCompos extends Component {
             <Route path="countPeople" element={<CountPeople />} />
             <Route path="players" element={<PlayersHome />} />
             <Route path="events" element={<CurrencyConverter />} />
+            <Route path="lifecycle" element={<LifecycleApp />} />
           </Routes>
         </ClassHome>
       </Fragment>

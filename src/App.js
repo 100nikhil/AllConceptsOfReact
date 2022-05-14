@@ -6,6 +6,7 @@ import Products from "./Components/home/Products";
 import ClassCompos from "./Components/class-components/ClassCompos";
 import { useSelector } from "react-redux";
 import ContextApiUsecase from "./Components/contextApiConcepts/ContextApiUsecase";
+import HooksConcepts from "./Components/hooksInReact/HooksConcepts";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={loggedIn ? <Products /> : <Navigate to={"/"} />} />
         <Route path="/contextApi" element={loggedIn ? <ContextApiUsecase /> : <Navigate to={"/"} />} />
+        <Route path="/hooks" element={loggedIn ? <HooksConcepts /> : <Navigate to={"/"} />} />
         {/* /classComonents/* here * means ClassCompos have child routes defined in it  */}
         <Route path="/classComponents/*" element={loggedIn?<ClassCompos />:<Navigate to={"/"} />} />
         <Route path="*" element={<Navigate to={"/"} />} />

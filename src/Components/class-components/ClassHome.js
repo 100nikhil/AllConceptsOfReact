@@ -16,6 +16,7 @@ class ClassHome extends Component {
             <li><Link to="/classComponents/countPeople">Count People</Link></li>
             <li><Link to="/classComponents/players">Players</Link></li>
             <li><Link to="/classComponents/events">events</Link></li>
+            <li><Link to="/classComponents/lifecycle">Lifecycle Methods</Link></li>
           </ul>
         </nav>
         {this.props.children}
