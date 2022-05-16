@@ -19,7 +19,7 @@
     component:
 
     constructor()
-    getDerivedStateFromProps()
+    getDerivedStateFromProps() - static method
     render()
     componentDidMount()
 
@@ -33,14 +33,14 @@
     updated:
 
     getDerivedStateFromProps()
-    shouldComponentUpdate()
+    shouldComponentUpdate()     - return true or false [if return false prevent rendering]
     render()
     getSnapshotBeforeUpdate()
     componentDidUpdate()
 
   
   Unmounting:
-  
+
     The next phase in the lifecycle is when a component is removed from the DOM, or 
     unmounting as React likes to call it.
 
@@ -56,6 +56,7 @@ class CompleteLifecycle extends Component{
 
   superHero = 'Superman';
 
+  //constructor called first when component mounted
   constructor(props){
     super(props);
     this.state = {
@@ -65,8 +66,39 @@ class CompleteLifecycle extends Component{
     console.log('Inside the constructor');
   }
 
+  /*
+    getDerivedStateFromProps() called right after constructor & right before rendering 
+    during Mounting...
+    and called first during Updating... phase 
+  */
+  static getDerivedStateFromProps(props){
+    console.log('Inside getDerivedStateFromProps()');
+    // return { villain: props.villain }
+    //can update state using props
+  }
+
   componentDidMount(){
     console.log('Inside ComponentDidMount');
+  }
+
+  //Called right after getDerivedStateFromProps() and right before render() during Updating...
+  shouldComponentUpdate(nextProps, nextState){
+    console.log('Inside shouldComponentUpdate()');
+    console.log('Updated new state is: ',nextState);
+    console.log('Updated new props is: ',nextProps);
+    return true;
+  }
+
+  /*
+    called right after render() during Updating...
+    In the getSnapshotBeforeUpdate() method you have access to the props and state before 
+    the update, meaning that even after the update, you can check what the values were 
+    before the update.
+  */  
+  getSnapshotBeforeUpdate(prevProps, prevState){
+    console.log('Inside getSnapshotBeforeUpdate()');
+    console.log(prevState);
+    console.log(prevProps);
   }
 
   componentDidUpdate(prevProps, prevState){

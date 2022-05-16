@@ -1,19 +1,20 @@
 import { Fragment } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { authActions } from "../store/auth-slice";
 
 const NavComponent = () => {
 
-  const loggedIn = useSelector(state => state.isLoggedIn);
+  const loggedIn = useSelector(state => state.auth.isLoggedIn);
   const dispatch = useDispatch();
 
   const logoutHandler = () => {
     localStorage.removeItem('token');
-    dispatch({type:"logMeOut"});
+    dispatch(authActions.logMeOut());
   }
   const loginHandler = () => {
     localStorage.setItem('token', "react-app");
-    dispatch({type:"logMeIn"});
+    dispatch(authActions.logMeIn());
   }
 
   return (

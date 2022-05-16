@@ -10,7 +10,7 @@ import HooksConcepts from "./Components/hooksInReact/HooksConcepts";
 
 function App() {
 
-  const loggedIn = useSelector(state => state.isLoggedIn);
+  const loggedIn = useSelector(state => state.auth.isLoggedIn);
 
   return(
     <Layout>
