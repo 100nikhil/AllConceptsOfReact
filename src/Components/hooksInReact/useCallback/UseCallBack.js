@@ -6,7 +6,7 @@
     [a, b],
   );
 
-  We know functions are onjects in JavaScript. So with every re render of component
+  We know functions are objects in JavaScript. So with every re render of component
   functions are recreated. To prevent this wrap a function with useCallBack(), So that
   it is created only once.
 
@@ -29,7 +29,8 @@
   will not be re rendered beacuse it's state todos & hence props is not changed.
 
   If we don't use useCallback() hook to wrap addTodo() method then this method will be 
-  recreated on each render and hence todos state does change and <Todos /> will render.
+  recreated on each render and hence passed props does change [addTodo() passed as prop see 
+  below] and <Todos /> will render unnecessarily.
 
   SO, useCallback() hook prevents the recreation of function. And React.memo() prevent
   re-render if props don't change.

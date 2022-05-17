@@ -8,6 +8,7 @@ import CountPeople from "./CountPeople";
 import PlayersHome from "./players/PlayersHome";
 import CurrencyConverter from "./events-example/CurrencyConverter";
 import LifecycleApp from "./lifecycleMethods/LifecycleApp";
+import RefTutorial from "./refs/RefTutorial";
 
 class ClassCompos extends Component {
   render() {
@@ -21,6 +22,7 @@ class ClassCompos extends Component {
             <Route path="players" element={<PlayersHome />} />
             <Route path="events" element={<CurrencyConverter />} />
             <Route path="lifecycle" element={<LifecycleApp />} />
+            <Route path="refs" element={<RefTutorial />} />
           </Routes>
         </ClassHome>
       </Fragment>
