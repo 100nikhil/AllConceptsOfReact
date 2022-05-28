@@ -118,6 +118,7 @@ class CompleteLifecycle extends Component{
   }
 
   render(){
+    console.log('Inside render...');
     return(
       <div style={{padding: '2rem', border: '2px solid blue', borderRadius:'10px'}}>
         <p>Three main lifecycle methods.</p>

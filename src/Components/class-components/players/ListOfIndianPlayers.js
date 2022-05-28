@@ -7,7 +7,7 @@ class ListOfIndianPlayers extends Component{
       <div>
         {this.props.allPlayers.map(p => {
           return (
-            <ul>
+            <ul key={p.name}>
               <li>{p}</li>
             </ul>
           );

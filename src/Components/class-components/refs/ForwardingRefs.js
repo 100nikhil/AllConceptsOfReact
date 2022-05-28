@@ -19,7 +19,7 @@ import React, { Component } from "react";
 
 //Here ref is forwarded to native <input > element of <ChildComponent >
 const ChildComponent = React.forwardRef((props, ref) => {
-    console.log(props);
+    console.log(props.sideProp);
     return(
       <input type='text' ref={ref}/>
     )
