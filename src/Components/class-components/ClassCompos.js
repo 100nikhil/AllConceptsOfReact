@@ -9,6 +9,7 @@ import PlayersHome from "./players/PlayersHome";
 import CurrencyConverter from "./events-example/CurrencyConverter";
 import LifecycleApp from "./lifecycleMethods/LifecycleApp";
 import RefTutorial from "./refs/RefTutorial";
+import Base from "./redux-with-class-components/Base";
 
 class ClassCompos extends Component {
   render() {
@@ -23,6 +24,7 @@ class ClassCompos extends Component {
             <Route path="events" element={<CurrencyConverter />} />
             <Route path="lifecycle" element={<LifecycleApp />} />
             <Route path="refs" element={<RefTutorial />} />
+            <Route path="redux" element={<Base />} />
           </Routes>
         </ClassHome>
       </Fragment>

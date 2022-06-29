@@ -73,7 +73,8 @@ class CompleteLifecycle extends Component{
   */
   static getDerivedStateFromProps(props){
     console.log('Inside getDerivedStateFromProps()');
-    // return { villain: props.villain }
+    console.log(props);
+      // return { villain: props.villain }
     //can update state using props
   }
 

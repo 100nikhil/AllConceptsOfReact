@@ -33,7 +33,7 @@ class ForwardingRefs extends Component{
   }
 
   clickHandler(){
-    //this.inputRef.current refer to <input > of ChildComponent
+    //this.inputRef.current refer to <input > of ChildComponent because of forwarding
     console.log(this.inputRef.current);
     this.inputRef.current.focus();
   }

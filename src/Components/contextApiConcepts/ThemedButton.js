@@ -8,7 +8,7 @@ class ThemedButton extends Component {
     console.log({...props});
     return (
       <button
-        {...props}
+        {...props}  //complete prop is passed
         style={{backgroundColor: theme.background, color: theme.foreground}}
       />
     );

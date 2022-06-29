@@ -18,6 +18,7 @@ class ClassHome extends Component {
             <li><Link to="/classComponents/events">events</Link></li>
             <li><Link to="/classComponents/lifecycle">Lifecycle Methods</Link></li>
             <li><Link to="/classComponents/refs">Refs Tutorial</Link></li>
+            <li><Link to="/classComponents/redux">Redux usage in Class Components</Link></li>
           </ul>
         </nav>
         {this.props.children}

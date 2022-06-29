@@ -39,7 +39,7 @@ class Posts extends Component {
         <h1>Posts</h1>
         {
           this.state.posts.map((p) => {
-            return (<div key={p.id} className="p-5 rounded-lg m-3" style={{backgroundColor:"grey"}}>
+            return (<div key={p.id} className="p-5 rounded-lg m-3" style={{backgroundColor:"#ccc"}}>
               <h4>{p.title}</h4>
               <p>{p.body}</p>
             </div>);
