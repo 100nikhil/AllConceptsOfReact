@@ -12,6 +12,7 @@
   useEffect(() => {}) or  useEffect(() => {}, []) === componentDidMount()
   useEffect(() => {}, [dep1, dep2...]) === componentDidUpdate()
   useEffect(() => { ... () => { cleanup function}}, [dep1, dep2...]) === componentWillUnmount()
+  
 */
 
 import { useEffect, useState } from "react";
